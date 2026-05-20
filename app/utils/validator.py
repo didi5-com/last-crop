@@ -26,7 +26,13 @@ def is_valid_plant(image_path):
 
 def validate_image(image_path):
     """
-    Main validation pipeline for Stage 1.
+    Main validation pipeline for Stage 1: Quality & Content Filtering.
+    
+    This stage prevents the AI pipeline from processing garbage data, 
+    which reduces false positives and improves overall system reliability.
+    
+    Currently implemented as a rule-based system with hooks for 
+    future AI-based validation models.
     """
     if is_low_quality(image_path):
         return False, "This image resolution is too low for a reliable prediction."

@@ -55,17 +55,34 @@ if HAS_TORCH:
 
 def predict_crop_and_disease(image_path):
     """
-    Complete AI Pipeline: Stage 2 & 3.
+    Complete Multi-Stage AI Pipeline for Crop Disease Detection.
+    
+    Stages:
+    1. Validation (Handled by caller using validator.py): Filter low quality/non-plant images.
+    2. Crop Identification (Stage 2): Identify which of the 8 supported crops is in the image.
+    3. Disease Detection (Stage 3): Use a crop-specific model to identify the disease or health status.
+    4. Confidence Thresholding: Enforced via confidence.py (85% requirement).
+    
+    Args:
+        image_path (str): Path to the uploaded image file.
+        
+    Returns:
+        tuple: (predicted_crop, predicted_disease, confidence)
     """
     if not HAS_TORCH:
         # Mock behavior for preview environment without torch
         import time
         time.sleep(1.5) # Simulate processing
-        predicted_crop = random.choice(['tomato', 'cassava', 'maize'])
+        predicted_crop = random.choice(CROPS)
         labels = {
-            'tomato': ['Early Blight', 'Late Blight', 'Healthy'],
-            'cassava': ['Cassava Mosaic Disease (CMD)', 'Brown Leaf Spot', 'Healthy'],
-            'maize': ['Maize Rust', 'Healthy']
+            'tomato': ['Healthy', 'Early Blight', 'Late Blight'],
+            'cassava': ['Healthy', 'Cassava Mosaic Disease (CMD)', 'Brown Leaf Spot'],
+            'maize': ['Healthy', 'Maize Rust'],
+            'potato': ['Healthy', 'Early Blight', 'Late Blight'],
+            'rice': ['Healthy', 'Rice Blast', 'Bacterial Leaf Blight'],
+            'pepper': ['Healthy', 'Bacterial Spot'],
+            'banana': ['Healthy', 'Black Sigatoka'],
+            'mango': ['Healthy', 'Anthracnose']
         }
         predicted_disease = random.choice(labels[predicted_crop])
         confidence = random.uniform(0.88, 0.98)
@@ -89,7 +106,12 @@ def predict_crop_and_disease(image_path):
     labels = {
         'tomato': ['Healthy', 'Early Blight', 'Late Blight'],
         'cassava': ['Healthy', 'Cassava Mosaic Disease (CMD)', 'Brown Leaf Spot'],
-        'maize': ['Healthy', 'Maize Rust']
+        'maize': ['Healthy', 'Maize Rust'],
+        'potato': ['Healthy', 'Early Blight', 'Late Blight'],
+        'rice': ['Healthy', 'Rice Blast', 'Bacterial Leaf Blight'],
+        'pepper': ['Healthy', 'Bacterial Spot'],
+        'banana': ['Healthy', 'Black Sigatoka'],
+        'mango': ['Healthy', 'Anthracnose']
     }
     
     if disease_model_path and os.path.exists(disease_model_path):

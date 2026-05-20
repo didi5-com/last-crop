@@ -21,6 +21,17 @@ TREATMENTS = {
             "fertilizer_recommendation": "Balanced NPK 15-15-15.",
             "isolation_advice": "Remove lower infected leaves.",
             "watering_advice": "Water at the base of the plant."
+        },
+        "Healthy": {
+            "severity": "None",
+            "symptoms": "Green, vibrant leaves with no visible spots or distortion.",
+            "causes": "Proper care and favorable environment.",
+            "organic_treatment": "Maintain current organic practices.",
+            "chemical_treatment": "No chemical treatment required.",
+            "prevention": "Continue regular monitoring and good hygiene.",
+            "fertilizer_recommendation": "Maintain balanced soil fertility.",
+            "isolation_advice": "No isolation needed.",
+            "watering_advice": "Continue regular watering schedule."
         }
     },
     "tomato": {
@@ -45,6 +56,17 @@ TREATMENTS = {
             "fertilizer_recommendation": "Phosphorus-heavy fertilizer.",
             "isolation_advice": "Destroy entire plant immediately if detected.",
             "watering_advice": "Keep foliage dry at all costs."
+        },
+        "Healthy": {
+            "severity": "None",
+            "symptoms": "Vibrant green leaves, firm fruit, and sturdy stems.",
+            "causes": "Optimal growth conditions.",
+            "organic_treatment": "Continue mulching and compost application.",
+            "chemical_treatment": "None needed.",
+            "prevention": "Keep foliage dry and maintain airflow.",
+            "fertilizer_recommendation": "Balanced N/P/K with focus on Calcium.",
+            "isolation_advice": "None needed.",
+            "watering_advice": "Continue drip irrigation."
         }
     },
     "maize": {
@@ -58,6 +80,17 @@ TREATMENTS = {
             "fertilizer_recommendation": "Nitrogen-rich fertilizer.",
             "isolation_advice": "Monitor nearby fields.",
             "watering_advice": "Standard maize irrigation."
+        },
+        "Healthy": {
+            "severity": "None",
+            "symptoms": "Broad, green leaves with no pustules or wilting.",
+            "causes": "Good seed selection and proper nitrogen levels.",
+            "organic_treatment": "Maintain soil organic matter.",
+            "chemical_treatment": "None needed.",
+            "prevention": "Rotate crops with legumes.",
+            "fertilizer_recommendation": "Side-dress with nitrogen during growth.",
+            "isolation_advice": "None needed.",
+            "watering_advice": "Maintain deep watering during silking."
         }
     },
     "potato": {
@@ -82,6 +115,17 @@ TREATMENTS = {
             "fertilizer_recommendation": "Balanced NPK.",
             "isolation_advice": "Destroy infected plants immediately.",
             "watering_advice": "Avoid evening watering."
+        },
+        "Healthy": {
+            "severity": "None",
+            "symptoms": "Lush green canopy with no wilting or spots.",
+            "causes": "Certified seeds and proper hilling.",
+            "organic_treatment": "Continue hilling and mulching.",
+            "chemical_treatment": "None needed.",
+            "prevention": "Avoid planting near tomatoes.",
+            "fertilizer_recommendation": "High potassium for tuber development.",
+            "isolation_advice": "None needed.",
+            "watering_advice": "Keep soil consistently moist."
         }
     },
     "rice": {
@@ -106,6 +150,17 @@ TREATMENTS = {
             "fertilizer_recommendation": "Potassium-rich fertilizers.",
             "isolation_advice": "Keep fields well-drained.",
             "watering_advice": "Controlled irrigation."
+        },
+        "Healthy": {
+            "severity": "None",
+            "symptoms": "Uniformly green leaves, upright growth.",
+            "causes": "Balanced fertilization and water management.",
+            "organic_treatment": "Continue organic soil amendments.",
+            "chemical_treatment": "None needed.",
+            "prevention": "Use resistant varieties.",
+            "fertilizer_recommendation": "Balanced N/P/K/Si.",
+            "isolation_advice": "None needed.",
+            "watering_advice": "Maintain appropriate flood levels."
         }
     },
     "banana": {
@@ -119,6 +174,17 @@ TREATMENTS = {
             "fertilizer_recommendation": "High potassium for fruit quality.",
             "isolation_advice": "De-leaf regularly.",
             "watering_advice": "Avoid wetting foliage."
+        },
+        "Healthy": {
+            "severity": "None",
+            "symptoms": "Broad, intact green leaves, no streaks.",
+            "causes": "Proper spacing and air circulation.",
+            "organic_treatment": "Continue regular pruning of old leaves.",
+            "chemical_treatment": "None needed.",
+            "prevention": "Monitor for early signs of streaks.",
+            "fertilizer_recommendation": "Potassium-heavy fertilizer.",
+            "isolation_advice": "None needed.",
+            "watering_advice": "Water at the base of the pseudostem."
         }
     },
     "mango": {
@@ -132,6 +198,30 @@ TREATMENTS = {
             "fertilizer_recommendation": "Micronutrient sprays (Zinc, Boron).",
             "isolation_advice": "Prune dead branches.",
             "watering_advice": "Water at the drip line."
+        }
+    },
+    "pepper": {
+        "Bacterial Spot": {
+            "severity": "High",
+            "symptoms": "Small, water-soaked spots on leaves that turn brown.",
+            "causes": "Bacteria (Xanthomonas campestris pv. vesicatoria).",
+            "organic_treatment": "Copper sprays and crop rotation.",
+            "chemical_treatment": "Streptomycin or copper-based bactericides.",
+            "prevention": "Use certified disease-free seeds.",
+            "fertilizer_recommendation": "Balanced NPK with micronutrients.",
+            "isolation_advice": "Remove infected plants and debris.",
+            "watering_advice": "Avoid overhead irrigation."
+        },
+        "Healthy": {
+            "severity": "None",
+            "symptoms": "Smooth, green leaves with no spots.",
+            "causes": "Good seed quality and clean tools.",
+            "organic_treatment": "Maintain organic mulch.",
+            "chemical_treatment": "None needed.",
+            "prevention": "Rotate with non-solanaceous crops.",
+            "fertilizer_recommendation": "Balanced NPK.",
+            "isolation_advice": "None needed.",
+            "watering_advice": "Water at the base of the plant."
         }
     }
 }

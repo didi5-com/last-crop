@@ -20,10 +20,18 @@ def get_transform(img_size=224):
 
 def preprocess_image(image_path, img_size=224):
     """
-    Loads and preprocesses an image for inference.
-    Includes normalization and resizing. 
-    Note: For production 'background cleanup' or 'leaf isolation', 
-    additional GrabCut or Mask R-CNN stages could be added here.
+    Standardizes image data for Stage 2 & 3 inference.
+    
+    Processing Steps:
+    1. Load image using PIL.
+    2. Convert to RGB (removes Alpha channel if present).
+    3. Resize to model's input size (default 224x224).
+    4. Convert to Tensor.
+    5. Normalize using ImageNet statistics (Standard for transfer learning).
+    
+    Advanced Production Considerations:
+    - Background Cleanup: Removing noise/soil from background.
+    - Leaf Isolation: Using semantic segmentation to focus only on the leaf.
     """
     if not HAS_TORCH:
         return None
