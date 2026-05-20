@@ -19,6 +19,12 @@ def get_transform(img_size=224):
     ])
 
 def preprocess_image(image_path, img_size=224):
+    """
+    Loads and preprocesses an image for inference.
+    Includes normalization and resizing. 
+    Note: For production 'background cleanup' or 'leaf isolation', 
+    additional GrabCut or Mask R-CNN stages could be added here.
+    """
     if not HAS_TORCH:
         return None
     image = Image.open(image_path).convert('RGB')

@@ -95,6 +95,17 @@
                                 <p class="text-sm text-yellow-200">{{ treatment.fertilizer_recommendation }}</p>
                             </div>
                         </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-purple-900/20 border border-purple-800/50 p-4 rounded-2xl">
+                                <h4 class="text-purple-400 text-xs uppercase font-bold mb-2">Isolation Advice</h4>
+                                <p class="text-sm text-purple-200">{{ treatment.isolation_advice }}</p>
+                            </div>
+                            <div class="bg-cyan-900/20 border border-cyan-800/50 p-4 rounded-2xl">
+                                <h4 class="text-cyan-400 text-xs uppercase font-bold mb-2">Watering Advice</h4>
+                                <p class="text-sm text-cyan-200">{{ treatment.watering_advice }}</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-slate-700 flex space-x-4">
